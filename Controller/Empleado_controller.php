@@ -1,10 +1,10 @@
 <?php
 
-require_once "Model/Personas_Model.php";
+require_once "Model/Pagina_Model.php";
 
 //--------------------------------------- Paginacion -------------------------------------
-    $empleado=new Paginar();
-    $total_registro=$empleado->Obtener_registros_Totales();
+    $empleado=new Pagina();
+    $total_registro=$empleado->Obtener_Empleados_Totales();
     $registro_por_paginas=4;
     
     if (!isset($_GET["page"])) {//evulua cuando no se ha click en la paginacion
@@ -50,6 +50,6 @@ function siguiente($numero_total_paginas)
         $mostrar=$empezar_desde+1;
     }
 
-require_once "View/Personas_View_boostrap.php";
+require_once "View/Empleado_View.php";
 
 ?>
