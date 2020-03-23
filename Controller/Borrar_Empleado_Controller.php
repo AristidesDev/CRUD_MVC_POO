@@ -7,6 +7,6 @@
     $borrar=new Empleado();
     $borrar->Borrar_Empleado($ID);
     
-    header("Location: ../CRUD.php?page="  . $_GET['page']);
+    header("Location: ../View/Empleado_View.php?page="  . $_GET['page']);
       
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-require_once "Model/Pagina_Model.php";
+require_once "../Model/Pagina_Model.php";
 
 //--------------------------------------- Paginacion -------------------------------------
     $empleado=new Pagina();
@@ -50,6 +50,6 @@ function siguiente($numero_total_paginas)
         $mostrar=$empezar_desde+1;
     }
 
-require_once "View/Empleado_View.php";
+// require_once "View/Empleado_View.php";
 
 ?>

@@ -10,6 +10,6 @@
     $insertar=new Empleado();
     $insertar->insertar_Empleado($nombre, $email, $direccion, $telefono);
     
-    header("Location: ../CRUD.php?");
+    header("Location: ../View/Empleado_View.php");
       
 ?>

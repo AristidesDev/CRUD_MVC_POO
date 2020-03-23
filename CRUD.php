@@ -14,17 +14,10 @@
     </head>
 
     <body>
-    <div class="container">
-        <div class="container">
-            <header class="header">
-                <h1 class="text-center">Modelo Vista Controlador</h1>
-                <h2 class="text-center">CRUD - Paginacion</h2><br>
-                </header>
-            </div>
-            <?php
-                require "Controller/Empleado_controller.php";
-            ?>
-        </div>
+    
+        <?php
+            require_once "View/Empleado_View.php";
+        ?>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
