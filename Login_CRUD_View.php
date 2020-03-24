@@ -17,7 +17,7 @@
    <!------ Include the above in your HEAD tag ---------->
    <div class="sidenav">
       <div class="login-main-text">
-         <h2>Aplicacion CRUD</h2>
+         <h3 class="log_CRUD">Aplicacion CRUD</h3>
          <p>El CRUD tiene paginacion<br>
             se uso programacion orientada a objetos <br>
             con el Modelo Vista Controlador</p>
@@ -26,21 +26,21 @@
    <div class="main">
       <div class="col-md-6 col-sm-12">
          <div class="login-form">
-            <?php
-            if (!isset($_SESSION["login"])) {
-               include "View/Formulario_Login_View.php";
-            } else {
-               header("Location: ../MVC_CRUD_Paginacion/CRUD.php");
-               echo "Usuario: " . $_SESSION["login"];
-            }
-            ?>
+            <form name="form1" method="post" action="Controller/Validar_Usuario_Controller.php">
+               <div class="form-group">
+                  <label>Usuario</label>
+                  <input type="text" class="form-control" name="usuario" id="usuario" placeholder="User Name" value="">
+               </div>
+               <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="">
+               </div>
+               <button type="submit" class="btn btn-black" name="Enviar" id="Enviar">Entrar</button>
+               <button type="button" class="btn btn-black" name="regresar" id="regresar"><a href="#">Regresar</a></button>
+            </form>
          </div>
       </div>
    </div>
-
-   <?php
-      require "Controller/Empleado_controller.php";
-   ?>
    </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

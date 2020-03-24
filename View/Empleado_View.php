@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
-    <?php
-    require_once "../Controller/Empleado_controller.php";
+    <?php 
+    include "../Controller/Validar_Sesion_Controller.php";
+    require_once "../Controller/Empleado_controller.php"; 
     ?>
 
 </head>
@@ -20,8 +21,9 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="text-center">Modelo Vista Controlador</h1>
-            <h2 class="text-center">CRUD - Paginacion</h2>
+            <div class="text-right"><a  class='btn btn-danger pull-rigth' href="../Controller/Cerrar_Sesion_Controller.php">Cerrar Sesion</a></div>
+            <div class="text-center"><h1 class="">Modelo Vista Controlador</h1></div>
+            <div class="text-center"><h3 class="h2">CRUD - Paginacion</h3></div>
         </header>
         <!------------------------------ Cabecera de la tabla y boton modal de agregar empleado -------------------------------------->
         <div class="container">

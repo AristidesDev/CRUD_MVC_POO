@@ -9,10 +9,13 @@ $nun = $loguear->consultar_Login($usuario, $password);
 
 echo $nun;
 
-if ($nun == 1) { 
-    session_start(); 
+if ($nun == 1) {
+    session_start();
+    $_SESSION["autentica"] = "SIP";
+    $_SESSION["usuarioactual"] = $usuario;
     header("location: ../View/Empleado_View.php");
 } else {
+    // header("location: ../Login_CRUD_View.php");
+    // echo "<script>alert('La contrase\u00f1a del usuario no es correcta.'); window.location.href=..\'Login_CRUD_View.php'\</script>";
     echo "usuario no encontrado";
-    // header("location: 05_Formulario_Inicio.php"); //No hay considencias, redirige a la pagina de login
 }
